@@ -98,7 +98,7 @@ and a lock keeps CPU inference to one request at a time.
 https://drive.google.com/file/d/1QnLomRFBrhPM3z3g02cbt5UQP2zZGaK_/view?usp=sharing
 
 **Live system (web application)**
-https://tinyurl.com/ybz3pwyj
+(https://preparation-friendship-shared-focus.trycloudflare.com/)
 
 
 ## Credits
