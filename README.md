@@ -1,6 +1,17 @@
+Project links
+Resource
+Link
+GitHub repository (code, notebooks, README)
+https://github.com/ayioka/MACHINE-TRANSLATION-SUMMATIVE.git
+Demo video
+[ADD VIDEO LINK]
+Live system (web application)
+[ADD HUGGING FACE SPACE LINK]
+
+
+
 ---
 title: Kidaw'ida Translator
-emoji: 🌿
 colorFrom: green
 colorTo: yellow
 sdk: docker
