@@ -103,9 +103,11 @@ translated as one batch and joined back, keeping line breaks. Sentences already 
 and a lock keeps CPU inference to one request at a time.
 
 **Demo video**
-[ADD VIDEO LINK]
+
+https://drive.google.com/file/d/1QnLomRFBrhPM3z3g02cbt5UQP2zZGaK_/view?usp=sharing
+
 **Live system (web application)**
-[ADD HUGGING FACE SPACE LINK]
+
 
 
 ## Credits
