@@ -1,15 +1,3 @@
-Project links
-Resource
-Link
-GitHub repository (code, notebooks, README)
-https://github.com/ayioka/MACHINE-TRANSLATION-SUMMATIVE.git
-Demo video
-[ADD VIDEO LINK]
-Live system (web application)
-[ADD HUGGING FACE SPACE LINK]
-
-
-
 ---
 title: Kidaw'ida Translator
 colorFrom: green
@@ -113,6 +101,12 @@ decoder is forced to start with the target tag (`dav_Latn` for Kidaw'ida, `swh_L
 Because the model was trained on short sentences (4.5 words on average), longer input is split at `.`, `!` and `?`,
 translated as one batch and joined back, keeping line breaks. Sentences already translated are served from an in-memory LRU cache,
 and a lock keeps CPU inference to one request at a time.
+
+**Demo video**
+[ADD VIDEO LINK]
+**Live system (web application)**
+[ADD HUGGING FACE SPACE LINK]
+
 
 ## Credits
 
