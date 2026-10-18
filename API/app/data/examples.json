@@ -1,0 +1,18 @@
+{
+  "swa": [
+    {"text": "Hospitali zimejengwa kila mahali nchini.", "note": "from the test set"},
+    {"text": "Unaenda wapi kesho asubuhi?", "note": "question"},
+    {"text": "Nina watoto watatu na ng'ombe 25.", "note": "numbers"},
+    {"text": "Chai ni mmea muhimu barani Afrika.", "note": "from the test set"},
+    {"text": "Sitaki chakula sasa hivi.", "note": "negation"},
+    {"text": "Daktari alisema dawa hii inapaswa kunywewa mara tatu kwa siku baada ya chakula.", "note": "long, medical"}
+  ],
+  "dav": [
+    {"text": "Mbuw'a yaw'o yechua magho mabaha.", "note": "from the test set"},
+    {"text": "Choo diende mighondinyi.", "note": "from the test set"},
+    {"text": "Orekunda kuja w'uki.", "note": "from the test set"},
+    {"text": "Mawingu ghaweida.", "note": "from the test set"},
+    {"text": "Ata ndew'ine w'aya.", "note": "from the test set"},
+    {"text": "Mulungu wadi jalia maisha ghipoiye.", "note": "from the test set"}
+  ]
+}

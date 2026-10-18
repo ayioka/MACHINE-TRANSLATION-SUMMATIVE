@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kidaw'ida ↔ Kiswahili Translator</title>
+  <meta name="description" content="Machine translation between Kidaw'ida (Taita) and Kiswahili, built by fine-tuning NLLB-200 on 15,000 sentence pairs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E3A2B'/%3E%3Cpath d='M13 7h6l-2 11h-4z' fill='%23C9A447'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="Kidaw'ida translator, home">
+        <span class="brand-name">Kidaw<span class="apos">'</span>ida</span>
+      </a>
+      <p class="status" id="status" role="status" data-state="loading">
+        <span class="status-dot" aria-hidden="true"></span><span id="status-text">Loading the model…</span>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro wrap">
+      <h1>Translate between Kidaw<span class="apos">'</span>ida and Kiswahili</h1>
+      <p class="lede">Kidaw'ida is the language of the Taita people in the Taita Hills of south-eastern Kenya.
+        Mainstream translation tools don't support it. This model learned it from 15,000 sentence pairs.</p>
+    </section>
+
+    <section class="translator wrap" aria-label="Translator">
+      <div class="direction" role="group" aria-label="Translation direction">
+        <span class="lang" id="src-name">Kiswahili</span>
+        <button class="swap" id="swap" type="button" aria-label="Swap languages" title="Swap languages">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h12m0 0-4-4m4 4-4 4M17 17H5m0 0 4-4m-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <span class="lang" id="tgt-name">Kidaw'ida</span>
+      </div>
+
+      <div class="panes">
+        <div class="pane pane-source">
+          <label class="visually-hidden" for="source-text">Text to translate</label>
+          <textarea id="source-text" maxlength="1000" spellcheck="false" autocomplete="off"
+                    placeholder="Andika sentensi kwa Kiswahili…"></textarea>
+          <div class="pane-foot">
+            <span class="count" id="count">0 / 1000</span>
+            <button class="ghost" id="clear" type="button" hidden>Clear</button>
+            <button class="primary" id="translate" type="button">Translate</button>
+          </div>
+        </div>
+
+        <div class="pane pane-target">
+          <div class="output" id="output" aria-live="polite" aria-label="Translation">
+            <p class="placeholder">The translation appears here.</p>
+          </div>
+          <div class="pane-foot">
+            <span class="meta" id="meta"></span>
+            <button class="ghost" id="copy" type="button" hidden>Copy</button>
+          </div>
+        </div>
+      </div>
+      <p class="hint">Press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to translate. Short, everyday sentences work best.</p>
+    </section>
+
+    <section class="examples wrap" aria-labelledby="examples-title">
+      <h2 id="examples-title">Try a sentence</h2>
+      <ul class="example-list" id="examples"></ul>
+    </section>
+
+    <section class="about wrap" aria-labelledby="about-title">
+      <h2 id="about-title">How well it works</h2>
+      <div class="about-grid">
+        <div>
+          <p id="about-text">The model is Meta's NLLB-200 (600 million parameters), which knows Kiswahili but had never seen
+            Kidaw'ida. It was fine-tuned on both translation directions with a new language tag for Kidaw'ida.</p>
+          <p class="metric-note" id="metric-note"></p>
+        </div>
+        <table class="results" id="results">
+          <caption class="visually-hidden">Test-set chrF++ scores for each system</caption>
+          <thead><tr><th scope="col">System</th><th scope="col">Kiswahili → Kidaw'ida</th><th scope="col">Kidaw'ida → Kiswahili</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3>Where it makes mistakes</h3>
+      <ul class="limits" id="limits"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Training data: <em>Low-Resource Language Data: Parallel Corpora for Kiswahili and Kidaw'ida</em>
+        (Mbogho et al., 2024), funded by the Lacuna Fund, CC BY 4.0. Machine translations can be wrong; check anything important with a speaker.</p>
+      <p><a href="/docs">API documentation</a></p>
+    </div>
+  </footer>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

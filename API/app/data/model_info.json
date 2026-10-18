@@ -1,0 +1,23 @@
+{
+  "model": "NLLB-200-distilled-600M, fully fine-tuned on both directions (experiment E6)",
+  "base_model": "facebook/nllb-200-distilled-600M",
+  "data": {
+    "name": "Low-Resource Language Data: Parallel Corpora for Kiswahili and Kidaw'ida (Mbogho et al., 2024, Lacuna Fund)",
+    "train_pairs": 15184, "val_pairs": 1000, "test_pairs": 5058,
+    "note": "Duplicates and 1,973 training pairs that overlapped with the official test split were removed before training."
+  },
+  "results": [
+    {"system": "NLLB-200 without fine-tuning", "swa_dav": 10.72, "dav_swa": 20.67},
+    {"system": "Transformer trained from scratch (7.6M)", "swa_dav": 46.85, "dav_swa": 49.06},
+    {"system": "NLLB fine-tuned, 25% of the data", "swa_dav": 48.30, "dav_swa": null},
+    {"system": "NLLB with LoRA adapters (1.4% of weights trained)", "swa_dav": 53.22, "dav_swa": null},
+    {"system": "This model: NLLB fine-tuned, both directions", "swa_dav": 54.39, "dav_swa": 57.17, "deployed": true}
+  ],
+  "metric": "chrF++ on 5,058 held-out sentence pairs (0–100, higher is better)",
+  "limitations": [
+    "Trained on short everyday sentences (4.5 words on average). Long or technical sentences are less reliable.",
+    "Small function words like na, kwa and ni are sometimes left in Kiswahili when translating into Kidaw'ida.",
+    "Single words without context, such as 'huku' or 'changamoto', are the weakest case.",
+    "Kidaw'ida spelling varies between writers, especially apostrophes (w'andu vs wandu)."
+  ]
+}
