@@ -1,13 +1,4 @@
----
-title: Kidaw'ida Translator
-colorFrom: green
-colorTo: yellow
-sdk: docker
-app_port: 7860
-pinned: false
----
-
-# Kidaw'ida ↔ Kiswahili Translator
+**# Kidaw'ida ↔ Kiswahili Translator**
 
 A FastAPI service and web frontend for translating between **Kidaw'ida** (Taita, ISO 639-3 `dav`) and **Kiswahili**.
 It serves NLLB-200-distilled-600M fine-tuned on both directions (experiment E6 of the project):
@@ -107,7 +98,7 @@ and a lock keeps CPU inference to one request at a time.
 https://drive.google.com/file/d/1QnLomRFBrhPM3z3g02cbt5UQP2zZGaK_/view?usp=sharing
 
 **Live system (web application)**
-
+https://tinyurl.com/ybz3pwyj
 
 
 ## Credits
